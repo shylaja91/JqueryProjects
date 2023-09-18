@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module3-Lab Exercise 1</title>
+    <style>
+        body {
+            background-color: rgb(152, 214, 223);
+            margin-left: 10px;
+            margin-right: 20px;
+        }
+        
+        hr {
+            color: white;
+        }
+        
+        .formclass {
+            background-color: white;
+            width: 100%;
+            height: 32px;
+            padding: 5px;
+        }
+        
+        .registerclass {
+            background-color: rgb(48, 177, 48);
+            color: white;
+            width: 100%;
+            height: 32px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--.Lab Exercise 1: We work on Form validation for a User Registration-->
+    <center>
+        <h2>User Registration Form</h2>
+    </center>
+    <hr>
+    <form id="formValidation">
+        <label for="fname">FirstName:</label>
+        <input type="text" name="fname" id="fname" class="formclass" placeholder="Firstname" />
+        <br>
+        <label for="lname">LastName:</label>
+        <input type="text" name="lname" id="lname" class="formclass" placeholder="Lastname" />
+        <br>
+        <label for="gender">Gender:</label><br>
+        <input type="radio" name="gender" id="male" />Male
+        <input type="radio" name="gender" id="female" /> Female
+        <input type="radio" name="gender" id="others" />Others
+        <br>
+        <br>
+        <label for="city">City:</label>
+        <select id="city">
+            <option>Coimbatore</option>
+            <option>Chennai</option>
+            <option>Bangalore</option>
+            <option>Salem</option>
+            </select><br>
+        <label for="phone">PhoneNumber:</label>
+        <input type="text" name="phone" id="pin" class="formclass" value="+91" />
+        <br>
+        <br>
+        <input type="text" name="phone" id="phone" class="formclass" placeholder="phone no" />
+        <br>
+        <label for="address">CurrentAddress:</label>
+        <input type="textarea" name="address" id="address" class="formclass" placeholder="Current Address" />
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" class="formclass" placeholder="Enter mail id" />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" class="formclass" placeholder="Enter Password" />
+        <label for="password1">Re-type Password:</label>
+        <input type="password" name="password" id="password1" class="formclass" placeholder="Retype Password" />
+        <br>
+        <br>
+
+        <input type="submit" name="register" id="register" class="registerclass" value="Register" />
+
+    </form>
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('#register').click(function() {
+                var x = $("#fname").val();
+                alert(a);
+            });
+
+        });
+    </script>
+</body>
+
+</html>

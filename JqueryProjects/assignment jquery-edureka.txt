@@ -1,0 +1,55 @@
+Module 1–
+Introducing jQuery©B r a i n 4 c e   E d u c a t i o n   S o l
+ u t i o n s  P v t .   L t d
+Page 1www.edureka.co/jquery-ui-development
+Assignment
+?Create a webpage with anchor links and form fields and use jQuery selectors to add some styling dynamically
+Try to use below selectors:
+1.Tag Selector
+2.Attribute Selector
+3.Class selector
+---------------------------------------------------------------------------------------------------------------------------------------
+Module 2-
+Create a webpage with the following fields as the form fields,
+ » First Name
+ » Last Name
+ 2.Add more fields with jQuery & remove last name field.
+» Address
+ » Email ID
+ » Date of Birth
+3.Modify the attributes  for date of birth field to type=”date” & Email ID to type=”email”
+4.Write HTML & jQuery script to create  a sliding panel, using jQuery Sliding methods
+5.Create an animated tooltips with jQuery on hovering buttons.
+----------------------------------------------------------------------------------------------------------------------------------  
+Module 3
+1.Lab Exercise 1: We work on Form validation for a User Registration
+2.Lab Exercise 2: Password Confirmation and show Hints
+3.Lab Exercise 3: Scrolling Browser Window with events
+--------------------------------------------------------------------------------------------------------------------------------------
+Module 4
+Lab Exercise 1 : Calling Flickr API with jQuery AJAX
+link for flickr: https://www.flickr.com/services/feeds/docs/photos_public/
+url : https://www.flickr.com/services/feeds/photos_public.gne
+Lab Exercise 2 : Working with Github API
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Module 5
+Develop an Image slider Plugin, which can used anywhere using the plugin concept?
+Develop an Accordian UI Component as a plugin, to use in any UI Project?[https://youtu.be/jNnPkytqJfo]
+https://www.dreamhost.com/blog/how-to-create-your-first-wordpress-plugin/
+-------------------------------------------------------------------------------------------------------------------------------------
+Module 6
+Develop Google Search Auto Complete using jQuery UI Auto Complete
+Implement Datepicker from jQuery UI
+https://jqueryui.com/autocomplete/
+-----------------------------------------------------------------------------------------------------------------------------------
+Module 7
+Build jQuery Mobile Form, with most used input type and fields
+Develop jQuery Mobile Side Navigation, likeNative mobile slide navigation
+------------------------------------------------------------------------------------------------------------------------------------
+http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.zip
+----------------------------------------------------------------------------------------------------------------------------------
+Module 8 
+jQuery Mobile App 
+Type : Corp Event 
+Data : You will developing a Event Mobile App using jQuery Mobile.

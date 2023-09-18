@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery LocalStorage SetItem</title>
+
+</head>
+
+<body>
+    <h1 id="data">Hello World!</h1>
+    <button>click me!</button>
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('button').on("click", function(event) {
+                var data = $('#data').text();
+                // console.log(data);
+                localStorage.setItem('data', data);
+                window.location.href = "jquerylocalstorage2.html";
+            });
+
+        });
+    </script>
+</body>
+
+</html>

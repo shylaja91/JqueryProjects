@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="ic_launcher" href="ic_launcher/1024.png" />
+    <link rel="ic_launcher" sizes="72x72" href="ic_launcher/res/mipmap-hdpi/ic_launcher.png">
+    <link rel="ic_launcher" sizes="144x144" href="ic_launcher/res/mipmap-xxhdpi/ic_launcher.png">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="custom.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>Choose Town-Restaurant finder app</title>
+</head>
+
+<body>
+    <div id="choisir_ville" data-role="page" data-add-back-btn="true">
+        <div data-role="header">
+            <h1>Restaurant Picker</h1>
+        </div>
+        <div data-role="content">
+            <div class="choice-list">
+                <h1>In which town do you want to eat</h1>
+                <ul data-role="listview" data-inset="true" data-filter="true">
+                    <li><a href="choose_restaurant.html" data-transition="slidedown">Delhi<span class="ui-li-count">3</span></a></li>
+                    <li><a href="choose_restaurant.html" data-transition="slidedown">Calcutta<span class="ui-li-count">2</span></a></li>
+                    <li><a href="choose_restaurant.html" data-transition="slidedown">Chennai<span class="ui-li-count">5</span></a></li>
+                    <li><a href="choose_restaurant.html" data-transition="slidedown">Bombay<span class="ui-li-count">1</span></a></li>
+                    <li><a href="choose_restaurant.html" data-transition="slidedown">Bangalore<span class="ui-li-count">2</span></a></li>
+                    <li><a href="choose_restaurant.html" data-transition="slidedown">New York<span class="ui-li-count">2</span></a></li>
+                    <li><a href="choose_restaurant.html" data-transition="slidedown">San Francisco<span class="ui-li-count">10</span></a></li>
+                    <li><a href="choose_restaurant.html" data-transition="slidedown">Seattle<span class="ui-li-count">8</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

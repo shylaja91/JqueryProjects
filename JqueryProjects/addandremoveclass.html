@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Class and Remove class method usage</title>
+    <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui-1.13.2.custom/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui-1.13.2.custom/jquery-ui.structure.min.css">
+    <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui-1.13.2.custom/jquery-ui.theme.min.css">
+
+    <style>
+        .coloron {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <button id="addcolor">Add Color</button>
+        <button id="removecolor">RemoveColor</button>
+    </form>
+    <div id="coloring">
+        <p>Hi my First try for addClass and RemoveClass methods</p>
+    </div>
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script src="jqueryui/jquery-ui-1.13.2.custom/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#addcolor').click(function() {
+                console.log('Adding color');
+                //$('div').addClass('coloron');
+            });
+            $('#removecolor').click(function() {
+                $('div').removeClass('coloron');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datepicker from jQuery UI</title>
+    <link rel="stylesheet" type="text/css" href="jqueryuinew/jquery-ui/jquery-ui-1.13.2.custom/jquery-ui.min.js">
+    <link rel="stylesheet" type="text/css" href="jqueryuinew/jquery-ui/jquery-ui-1.13.2.custom/jquery-ui.structure.min.css">
+    <link rel="stylesheet" type="text/css" href="jqueryuinew/jquery-ui/jquery-ui-1.13.2.custom/jquery-ui.theme.min.css">
+</head>
+
+<body>
+    <label>Date:</label>
+    <input type="text" id="date" />
+</body>
+<script src="jquery/jquery-3.7.0.min.js"></script>
+<script src="jqueryui/jquery-ui-1.13.2.custom/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#date').datepicker();
+    });
+</script>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="ic_launcher" href="ic_launcher/1024.png" />
+    <link rel="ic_launcher" sizes="72x72" href="ic_launcher/res/mipmap-hdpi/ic_launcher.png">
+    <link rel="ic_launcher" sizes="144x144" href="ic_launcher/res/mipmap-xxhdpi/ic_launcher.png">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="custom.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Restaurant Picker-restaurant finder app</title>
+</head>
+
+<body>
+    <div id="restau" data-role="page" data-add-back-btn="true">
+        <div data-role="header">
+            <h1>Restaurant Picker</h1>
+        </div>
+        <div data-role="content">
+            <div class="ui-grid-a" id="restau_infos">
+                <div class="ui-block-a">
+                    <h1>Mariott</h1>
+                    <p><strong>Welcome to mariott</strong></p>
+                    <p>On the menu:</p>
+                    <ul>
+                        <li>Milkshake with chocolate</li>
+                        <li>Pancakes</li>
+                        <li>Pies</li>
+                    </ul>
+
+                </div>
+                <div class="ui-block-b">
+                    <p><img src="marriott.jpg" alt="jeannette photo" /></p>
+                    <p><a href="www.google.fr" rel="external" data-role="button">see our website</a></p>
+                </div>
+            </div>
+            <hr />
+            <div class="ui-grid-a" id="contact_infos">
+                <div class="ui-block-a">
+                    <h2>Contact Us</h2>
+                    <p>30 Kormangla</p>
+                    <p>Bangalore</p>
+                </div>
+                <div class="ui-block-b">
+                    <img src="01_maps.jpg" alt="plan jeanette" />
+                </div>
+            </div>
+            <div id="contact_buttons">
+                <a href="" data-role="button" data-icon="maps"></a>
+                <a href="tel:0388161072" data-role="button" data-icon="tel">call us</a>
+            </div>
+        </div>
+</body>
+
+</html>

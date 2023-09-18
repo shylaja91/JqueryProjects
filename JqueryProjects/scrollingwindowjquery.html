@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Scrolling Browser Window with events-->
+    <h1>Scrolling Browser Window with events</h1>
+    <textarea id="t1" name="t1" row=5 cols=25>Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Vero aut labore molestias, 
+        tempora asperiores provident distinctio impedit cum obcaecati 
+        exercitationem rerum nisi voluptatem
+         minima mollitia natus ratione veniam corrupti tenetur!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quaerat, 
+        quia numquam odio quisquam consectetur voluptas sit obcaecati in consequatur 
+        reprehenderit quibusdam ea quasi, vitae inventore est exercitationem expedita atque.</textarea>
+    <div id="d" class="alert">scroll this window</div>
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#t1').scroll(function() {
+                $('#d').css("display", "inline").fadeOut("slow");
+                setTimeout(function() {
+                    $('#d').html("textarea stopped...")
+                }, 500);
+            })
+            $(window).scroll(function() {
+                $('#d').html("window scroll started")
+                $('#d').css("display", "inline").fadeOut("slow");
+                setTimeout(function() {
+                    $('#d').html("window scroll stopped...")
+                }, 500);
+            })
+        });
+    </script>
+</body>
+
+</html>

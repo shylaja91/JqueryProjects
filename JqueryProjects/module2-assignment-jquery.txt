@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery module-2 Assignment</title>
+    <style>
+        #slide {
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            background-color: magenta;
+        }
+        
+        #slide1 {
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            background-color: rgb(19, 137, 211);
+        }
+        
+        #slide2 {
+            border: 1px solid black;
+            height: 0px;
+            width: 0px;
+            background-color: rgb(5, 90, 42);
+        }
+        
+        #animated-tooltip {
+            border: 1px solid black;
+            border-radius: 60px;
+            padding: 10px 25px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="MainDiv">
+        <h2>Assignment Jquery Module2</h2>
+        <p>DOM manipulation</p>
+        <form>
+            <!--Create a webpage with the following fields as the form fields,
+ » First Name
+ » Last Name-->
+            Name:<input type="text" id="fname" name="fname" placeholder="Enter your first name" />
+            <input type="text" id="lname" name="lname" placeholder="Enter your last name" />
+            <!--.Add more fields with jQuery & remove last name field.
+» Address
+ » Email ID
+ » Date of Birth-->
+            <div id="AddressText"></div>
+            <div id="EmailText"></div>
+            <div id="DateText"></div>
+        </form>
+    </div>
+    <br>
+    <div id="slide" class="color-box"></div>
+    <button id="updown">slideUp and down</button>
+    <br><br>
+    <div id="slide1" class="color-box"></div>
+    <button id="box-toggle">slide Toggle</button><br><br>
+    <div id="slide2" class="color-box"></div>
+    <button id="animated-tooltip">?</button>
+
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            /*.Add more fields with jQuery & remove last name field.
+                » Address
+                 » Email ID
+                 » Date of Birth*/
+            $('#AddressText').text('Address:');
+
+            $('<input/>', {
+
+                id: 'address',
+                type: 'text',
+                name: 'address',
+                placeholder: 'Enter your address'
+            }).appendTo('#AddressText');
+            $('#EmailText').text('Email:');
+            $('<input/>', {
+
+                id: 'email',
+                type: 'text',
+                name: 'email',
+                placeholder: 'Enter Your MailId'
+
+            }).appendTo('#EmailText');
+            $('#DateText').text('Date Of Birth:');
+            $('<input/>', {
+
+                id: 'date',
+                type: 'text',
+                name: 'date',
+                placeholder: 'Enter Date Of Birth'
+
+            }).appendTo('#DateText');
+            //removing last name field using jquery
+            $('#lname').remove();
+            /*Modify the attributes  for date of birth field to type=”date” & Email ID to type=”email”*/
+            $('#date').attr("type", "date");
+            $('#email').attr("type", "email");
+            /*Write HTML & jQuery script to create  a sliding panel, using jQuery Sliding methods*/
+            //slideDown(),slideUp
+            $('#updown').click(function() {
+                $('#slide').slideUp(1500);
+
+
+            });
+            $('#updown').click(function() {
+                $('#slide').slideDown(1500);
+
+
+            });
+            //slideToggle
+            $('#box-toggle').click(function() {
+                $('#slide1').slideToggle();
+            });
+            //Create an animated tooltips with jQuery on hovering buttons.
+            $('#animated-tooltip').mouseenter(function() {
+                $('#slide2').animate({
+                    'width': '100px',
+                    'height': '100px',
+                    'margin-top': '40px'
+                }, 2000);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

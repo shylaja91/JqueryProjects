@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="ic_launcher" href="ic_launcher/1024.png" />
+    <link rel="ic_launcher" sizes="72x72" href="ic_launcher/res/mipmap-hdpi/ic_launcher.png">
+    <link rel="ic_launcher" sizes="144x144" href="ic_launcher/res/mipmap-xxhdpi/ic_launcher.png">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="custom.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>Jquery Mobile App-Restaurant Finder</title>
+</head>
+
+<body>
+    <!--We will develop a jquery mobile app that will enable the user to choose a restaurant 
+        based on the cusine,dishes,the location of the restaurant
+    The Jquery mobile app that we are creating will be called as Restaurant Finder -->
+    <!--This page is about selecting a cusine-->
+    <div data-role="page" id="home" data-theme="c">
+        <div data-role="content">
+            <div id="branding">
+                <h1>Restaurant Picker</h1>
+                <hr>
+            </div>
+            <div class="choice-list">
+                <h1>What would you had like to eat?</h1>
+                <ul data-role="listview" dat-inset="true">
+                    <li>
+                        <a href="choose_town.html" data-transition="slidedown">
+                            <img src="fish.jpg" height="100px" width="100px" />
+                            <h3>Fish</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="choose_town.html" data-transition="slidedown">
+                            <img src="pizza.jpg" height="100px" width="100px" />
+                            <h3>Pizza</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="choose_town.html" data-transition="slidedown">
+                            <img src="kebap.jpg" height="100px" width="100px" />
+                            <h3>Kebabs</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="choose_town.html" data-transition="slidedown">
+                            <img src="burger.jpg" height="100px" width="100px" />
+                            <h3>Burgers</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="choose_town.html" data-transition="slidedown">
+                            <img src="continental.jpg" height="100px" width="100px" />
+                            <h3>Continental</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="choose_town.html" data-transition="slidedown">
+                            <img src="mughlai.jpg" height="100px" width="100px" />
+                            <h3>Mughlai</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+login.component.ts page
+
+
+
+import { Component } from '@angular/core';
+@Component({
+selector:'login-component',
+templateUrl:'./login.component.html'
+})
+
+export class LoginComponent{
+
+}
+-----------------------------------------------------------------------------------------------------------
+login.module.ts file
+
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { LoginComponent } from './login.component';
+
+@NgModule({
+    declarations:[LoginComponent],
+    providers:[],
+    imports:[BrowserModule],
+    bootstrap:[LoginComponent]
+})
+export class LoginModule{
+    
+}
+
+-----------------------------------------------------------------------------------------------------------------------
+login.component.html
+
+<h1>Login</h1>
+<form>
+    Username<input type="text" name="username"><br/> Password
+    <input type="password" name="password"><br/>
+    <button>Login</button>
+</form>

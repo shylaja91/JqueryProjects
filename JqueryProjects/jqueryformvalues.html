@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details of values entered inside form</title>
+    <style>
+        body {
+            background-color: rgb(152, 214, 223);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border: 1px solid black;
+        }
+        
+        h3,
+        p {
+            margin-left: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Form is submitted Successfully!</h1>
+    </center>
+    <h3> FirstName:</h3>
+    <p id="firstname"></p>
+    <h3> LastName:</h3>
+    <p id="lastname"></p>
+
+    <h3> City:</h3>
+    <p id="city"></p>
+    <h3> Phone Number:</h3>
+    <p id="phoneno"></p>
+    <h3> Current Address:</h3>
+    <p id="address"></p>
+    <h3> Email:</h3>
+    <p id="email"></p>
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var FirstName = localStorage.getItem('fname');
+            $('#firstname').text(FirstName);
+            var LastName = localStorage.getItem('lname');
+            $('#lastname').text(LastName);
+            var City = localStorage.getItem('city');
+            $('#city').text(City);
+            var Phone = localStorage.getItem('phone');
+            $('#phoneno').text(Phone);
+            var Address = localStorage.getItem('address');
+            $('#address').text(Address);
+            var Email = localStorage.getItem('email');
+            $('#email').text(Email);
+
+        });
+    </script>
+
+</body>
+
+</html>

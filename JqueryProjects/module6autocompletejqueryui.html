@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Develop Google Search Auto Complete using jQuery UI Auto Complete</title>
+    <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui-1.13.2.custom/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui-1.13.2.custom/jquery-ui.structure.min.css">
+    <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui-1.13.2.custom/jquery-ui.theme.min.css">
+</head>
+
+
+
+
+
+
+<body>
+
+    <div class="ui-widget">
+        <label for="tags">Tags: </label>
+        <input id="tags">
+    </div>
+
+
+
+
+
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script src="jqueryui/jquery-ui-1.13.2.custom/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+        });
+    </script>
+</body>
+
+</html>

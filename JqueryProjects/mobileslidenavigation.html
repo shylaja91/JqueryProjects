@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>jQuery Mobile Side Navigation, likeNative mobile slide navigation</title>
+</head>
+
+<body>
+    <div data-role="page" id="pageone" data-theme="a">
+        <div data-role="header" data-position="fixed">
+
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" data-icon="home">Home</a></li>
+
+                    <li><a href="#pagetwo" data-icon="arrow-r">Page Two</a></li>
+                    <li><a href="#" data-icon="search">Search</a></li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <div data-role="main">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam velit impedit dolor fugiat obcaecati provident earum eius atque magni maxime necessitatibus quisquam laudantium vel a, dolorum eveniet. Consectetur, incidunt quia!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aliquam nulla veniam, minima numquam quaerat illum voluptate aperiam necessitatibus libero veritatis non cumque dolor aut magni debitis, eos nam! Exercitationem!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam velit impedit dolor fugiat obcaecati provident earum eius atque magni maxime necessitatibus quisquam laudantium vel a, dolorum eveniet. Consectetur, incidunt quia!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam velit impedit dolor fugiat obcaecati provident earum eius atque magni maxime necessitatibus quisquam laudantium vel a, dolorum eveniet. Consectetur, incidunt quia!
+            </p>
+        </div>
+        <div data-role="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" data-icon="grid">Summary</a></li>
+                    <li><a href="#" data-icon="star" class="ui-btn-active">Favs</a></li>
+                    <li><a href="#" data-icon="gear">Setup</a></li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+
+        </div>
+        <!-- /footer -->
+    </div>
+    <div data-role="page" id="pagetwo" data-theme="b" style="text-align:center;">
+        <div data-role="header" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="pageone" data-icon="home">Home</a></li>
+
+                    <li><a href="#pageone" data-icon="arrow-l">Page one</a></li>
+                    <li><a href="#" data-icon="search">Search</a></li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <div data-role="main" class="ui-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum illo commodi, illum rerum nam accusamus architecto! Repellat explicabo omnis dicta distinctio, dolorum aspernatur dolore ut fugiat dolores nulla consectetur culpa?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aliquam nulla veniam, minima numquam quaerat illum voluptate aperiam necessitatibus libero veritatis non cumque dolor aut magni debitis, eos nam! Exercitationem!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam velit impedit dolor fugiat obcaecati provident earum eius atque magni maxime necessitatibus quisquam laudantium vel a, dolorum eveniet. Consectetur, incidunt quia!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam velit impedit dolor fugiat obcaecati provident earum eius atque magni maxime necessitatibus quisquam laudantium vel a, dolorum eveniet. Consectetur, incidunt quia!
+            </p>
+        </div>
+        <div data-role="footer" style="text-align:center;">
+            <p>Footer</p>
+        </div>
+    </div>
+</body>
+
+</html>

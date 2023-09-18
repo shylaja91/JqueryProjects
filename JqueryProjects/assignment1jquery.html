@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery module-1 Assignment</title>
+</head>
+
+<body>
+    <!--Create a webpage with anchor links and form fields and use jQuery selectors to add some styling dynamically-->
+    <h1>This is first jquery selector assignment</h1>
+    <a id="yt" href="https://www.youtube.com" target="_blank">YouTube</a>
+    <br>
+    <br>
+    <button class="button" name="button">Click me</button>
+
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("*").css('background-color', 'yellow');
+                //tag selector
+                $("h1").css('color', 'skyblue').css('margin-left', '370px');
+                //id selector
+                $("#yt").text('YouTube').css('color', 'red').css('font-size', '20px');
+                //class selector
+                $(".button").css('color', 'orange').css('background-color', 'green');
+                //attribute selector
+                $("a[target='_blank']").css('font-weight', 'bold');
+            });
+        });
+    </script>
+</body>
+
+</html>

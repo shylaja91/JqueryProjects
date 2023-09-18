@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calling Flickr API with jQuery AJAX</title>
+    <style>
+        .container {
+            background-color: azure;
+        }
+        
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        h2 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .filter-select {
+            list-style-type: none;
+        }
+        
+        .animal {
+            cursor: pointer;
+            background-color: antiquewhite;
+            color: black;
+            width: 20%;
+            height: 32px;
+            padding: 5px;
+            margin-left: 8px;
+            border-radius: 5px;
+        }
+        
+        .animal:hover {
+            background-color: whitesmoke;
+        }
+        
+        .grid {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h1>Calling Flickr API with jQuery AJAX</h1>
+            <h2>Choose which kind of animal you like to view photos</h2>
+
+            <ul class="filter-select">
+                <li><button id="dog" class="animal">Dogs</button></li>
+                <li><button id="cat" class="animal">Cats</button></li>
+                <li><button id="mouse" class="animal">Mouse</button></li>
+            </ul>
+        </center>
+    </div>
+    <div id="photos">
+
+    </div>
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('button').click(function() {
+                $('button').removeClass("selected");
+                $('this').addClass('selected');
+                var flickrAPI = "https://www.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+                var animal = $(this).text();
+                var flickrOptions = {
+                    tags: animal,
+                    format: "json"
+                };
+
+                function displayPhotos(data) {
+                    var photoHTML = '<ul>';
+                    $.each(data.items, function(i, photo) {
+                        photoHTML += '<li class="grids">';
+                        photoHTML += '<a href="' + photo.link + ' class="image">';
+                        photoHTML += '<img src="' + photo.media.m + '"></a></li>';
+
+                    });
+                    photoHTML += '</ul>';
+                    $('#photos').html(photoHTML);
+                }
+                $.getJSON(flickrAPI, flickrOptions, displayPhotos);
+            });
+        });
+    </script>
+</body>
+
+</html>

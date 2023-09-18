@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery LocalStorage getItem</title>
+
+</head>
+
+<body>
+    <div id="content"></div>
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var storedText = localStorage.getItem('data');
+            console.log(storedText);
+            $('#content').text(storedText);
+
+
+        });
+    </script>
+</body>
+
+</html>

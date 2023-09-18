@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(152, 214, 223);
+            margin-left: 10px;
+            margin-right: 20px;
+        }
+        
+        hr {
+            color: white;
+        }
+        
+        .formclass {
+            background-color: white;
+            width: 100%;
+            height: 32px;
+            padding: 5px;
+        }
+        
+        .registerclass {
+            cursor: pointer;
+            background-color: rgb(76, 33, 215);
+            color: white;
+            width: 100%;
+            height: 32px;
+            padding: 5px;
+            margin-left: 8px;
+            border-radius: 5px;
+        }
+        
+        .registerclass:hover {
+            background-color: rgb(13, 13, 105);
+        }
+        
+        p {
+            color: red;
+        }
+        
+        #head {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!--.Lab Exercise 1: We work on Form validation for a User Registration-->
+    <center>
+        <h2>User Registration Form</h2>
+    </center>
+    <hr>
+    <div id="head"> </div>
+    <label for="fname">FirstName:</label>
+    <input type="text" name="fname" id="fname" class="formclass" placeholder="Firstname" />
+    <p id="p1"></p>
+
+    <label for="lname">LastName:</label>
+    <input type="text" name="lname" id="lname" class="formclass" placeholder="Lastname" />
+    <p id="p2"></p>
+
+
+    <label for="gender">Gender:</label><br>
+    <input type="radio" name="gender" id="male" class="gender" />Male
+    <input type="radio" name="gender" id="female" class="gender" /> Female
+    <input type="radio" name="gender" id="others" class="gender" />Others
+    <p id="p3"></p>
+
+
+    <label for="city">City:</label>
+    <select id="city">
+        <option>Select City</option>
+            <option>Coimbatore</option>
+            <option>Chennai</option>
+            <option>Bangalore</option>
+            <option>Salem</option>
+            </select>
+    <p id="p4"></p>
+
+    <label for="phone">PhoneNumber:</label>
+    <input type="text" name="phone" id="phone" class="formclass" placeholder="phone no" maxlength="10" />
+    <p id="p5"></p>
+
+    <label for="address">CurrentAddress:</label>
+    <input type="text" name="address" id="address" class="formclass" placeholder="Current Address" />
+    <p id="p6"></p>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" class="formclass" placeholder="Enter mail id" />
+    <p id="p7"></p>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" class="formclass" placeholder="Enter Password" />
+    <p id="p8"></p>
+    <label for="password1">Re-type Password:</label>
+    <input type="password" name="password" id="password1" class="formclass" placeholder="Retype Password" />
+    <p id="p9"></p>
+    <input type="submit" name="register" id="register" class="registerclass" value="Register" />
+
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#register').click(function(e) {
+                var firstname = $("#fname").val();
+                var lastname = $("#lname").val();
+                var city = $("#city").val();
+                var phone = $("#phone").val();
+                var address = $('#address').val();
+                var email = $('#email').val();
+                var password = $('#password').val();
+                var password1 = $('#password1').val();
+                var name_regex = /^[a-zA-Z]+$/;
+                var phone_regex = /[0-9]{,10}/;
+                var address_regex = /^[0-9a-zA-Z]+$/;
+                var email_regex = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+                var count = 0;
+                //.Lab Exercise 2: Password Confirmation and show Hints
+                if (password == password1) {
+                    count = count + 1;
+                }
+                if (firstname.length == 0) {
+                    $('#head').text("All fields are mandatory");
+                    $('#fname').focus();
+                    return false;
+                } else if (!firstname.match(name_regex) || firstname.length == 0) {
+                    $('#p1').text("Name Field should have only alphabets and should be filled..");
+                    $('#fname').focus();
+                    return false;
+                } else if (!lastname.match(name_regex) || lastname.length == 0) {
+                    $('#p2').text("Name Field should have only alphabets and should be filled..");
+                    $('#lname').focus();
+                    return false;
+                } else if (city == "Select City") {
+                    $('#p4').text("City field cannot be empty");
+                    $('#city').focus();
+                    return false;
+                } else if (phone.match(phone_regex) || phone.length == 0) {
+                    $('#p5').text("phone number field cannot be empty and can have numbers only..");
+                    $('#phone').focus();
+                    return false;
+                } else if (address.match(address_regex) || address.length == 0) {
+                    $('#p6').text("Address field cannot be empty..");
+                    $('#address').focus();
+                    return false;
+                } else if (!email.match(email_regex) || email.length == 0) {
+                    $('#p7').text("Email field cannot be empty..");
+                    $('#email').focus();
+                    return false;
+                } else if (password.length == 0) {
+                    $('#p8').text("Password field cannot be empty..");
+                    $('#password').focus();
+                    return false;
+                } else if (count == 0) {
+                    $('#p9').text("password and confirm password should hold same value..Eg:if password=aaa then confirm password should also have aaa as value");
+                    $('#password1').focus();
+                    return false;
+
+                } else {
+                    alert("form is submitted successfully");
+                    return true;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian UI Component as a plugin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            margin: 0px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .accordian_box {
+            border: 1px solid gray;
+            padding: 0 15px 1px;
+            background-color: #e1e1e1;
+            color: #332e2e;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .accordian_box.active {
+            background-color: #fff;
+        }
+        
+        .acc_trigger {
+            padding: 15px 40px 15px 0;
+            margin: 0;
+            font-size: 30px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .acc_trigger i {
+            position: absolute;
+            right: 0;
+            top: 22px;
+            font-size: 20px;
+        }
+        
+        .acc_container {
+            display: none;
+        }
+        
+        .acc_container p {
+            margin-top: 0px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="accordion_area">
+            <div class="accordian_box active">
+                <h1 class="acc_trigger">Accordion Title 1<i class="fa-solid fa-plus"></i></h1>
+                <div class="acc_container">
+                    <p><pre>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Doloribus ipsam, dolore ab accusantium suscipit doloremque
+                            ipsum odit itaque quis obcaecati rem eligendi sequi neque,
+                            repudiandae error culpa ad maiores autem.</pre></p>
+                </div>
+            </div>
+            <div class="accordian_box">
+                <h1 class="acc_trigger">Accordion Title 2<i class="fa-solid fa-plus"></i></h1>
+                <div class="acc_container">
+                    <p><pre>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Doloribus ipsam, dolore ab accusantium suscipit doloremque
+                            ipsum odit itaque quis obcaecati rem eligendi sequi neque,
+                            repudiandae error culpa ad maiores autem.</pre></p>
+                </div>
+            </div>
+            <div class="accordian_box">
+                <h1 class="acc_trigger">Accordion Title 3<i class="fa-solid fa-plus"></i></h1>
+                <div class="acc_container">
+                    <p><pre>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Doloribus ipsam, dolore ab accusantium suscipit doloremque
+                            ipsum odit itaque quis obcaecati rem eligendi sequi neque,
+                            repudiandae error culpa ad maiores autem.</pre></p>
+                </div>
+            </div>
+            <div class="accordian_box">
+                <h1 class="acc_trigger">Accordion Title 4<i class="fa-solid fa-plus"></i></h1>
+                <div class="acc_container">
+                    <p><pre>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Doloribus ipsam, dolore ab accusantium suscipit doloremque
+                            ipsum odit itaque quis obcaecati rem eligendi sequi neque,
+                            repudiandae error culpa ad maiores autem.</pre></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.accordian_box:first').addClass('active')
+            $('.accordian_box:first').children('.acc_trigger').children('i').addClass('fa-minus')
+            $('.accordian_box:first').children('.acc_trigger').addClass('selected').next('.acc_container').show()
+            $('.acc_trigger').click(function(event) {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                    $(this).children('i').removeClass('fa-minus');
+                    $(this).next().slideUp();
+                    $(this).parent().removeClass('active');
+                } else {
+                    $('.acc_trigger').removeClass('selected');
+                    $(this).addClass('selected');
+                    $('.acc_trigger').children('i').removeClass('fa-minus');
+                    $(this).children('i').addClass('fa-minus');
+                    $('.acc_trigger').next().slideUp();
+                    $(this).next().slideDown();
+                    $('.accordian_box').removeClass('active');
+                    $(this).parent().addClass('active');
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>

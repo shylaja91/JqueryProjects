@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>jQuery Mobile Form, with most used input type and fields</title>
+
+</head>
+
+<body>
+    <h1 style="text-align:center;">Medical CheckUp</h1>
+
+    <div data-role="fieldcontain">
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" data-mini="true" />
+            <label for="mail">Email Id:</label>
+            <input type="email" id="mail" data-mini="true" />
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="" autocomplete="off">
+            <label for="number-pattern">Age:</label>
+            <input type="number" name="number" pattern="[0-9]*" id="number-pattern" value="">
+            <label for="date">Appointment Date:</label>
+            <input type="date" id="date" data-mini="true" />
+            <label for="tel">Tel:</label>
+            <input type="tel" name="tel" id="tel" value="">
+            <label for="file">Upload test report:</label>
+            <input type="file" name="file" id="file" value="">
+            <label for="lifestory">Health Story:</label>
+            <textarea id="lifestory"></textarea>
+            <!--<label for="textinput-hide" class="ui-hidden-accessible">Text Input:</label>
+            <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Text input" value="">-->
+
+            <a href="#" class="ui-shadow ui-btn ui-corner-all">Link button</a>
+            <button class="ui-shadow ui-btn ui-corner-all">Button element</button>
+            <input type="button" value="Button element" data-icon="delete" data-theme="a">
+            <!--Slider-->
+            <label for="slider">Rating for hospital:</label>
+            <input type="range" name="slider" id="slider" value="50" min="0" max="100">
+            <label for="slider-fill-mini">How many kilometers you walk daily:</label>
+            <input type="range" name="slider-fill-mini" id="slider-fill-mini" value="40" min="0" max="100" data-mini="true" data-highlight="true" data-theme="b" data-track-theme="b">
+            <!--Range slider-->
+
+            <div data-role="rangeslider">
+                <label for="range-1a">Blood Pressure Range:</label>
+                <input type="range" name="range-1a" id="range-1a" min="0" max="100" value="40">
+                <label for="range-1b">Blood Pressure Range:</label>
+                <input type="range" name="range-1b" id="range-1b" min="0" max="100" value="80">
+            </div>
+
+
+            <div data-role="rangeslider" data-mini="true">
+                <label for="range-2a">Blood sugar:</label>
+                <input type="range" name="range-2a" id="range-2a" min="0" max="100" value="40">
+                <label for="range-2b">Blood sugar:</label>
+                <input type="range" name="range-2b" id="range-2b" min="0" max="100" value="80">
+            </div>
+            <label for="slider2">New to hospital:</label>
+            <select name="slider2" id="slider2" data-role="slider">
+                <option value="off">No</option>
+                <option value="on">Yes</option>
+            </select>
+            <fieldset data-role="controlgroup">
+
+                <legend>Click What are all the checkup you like to do:</legend>
+                <input type="checkbox" name="checkbox-1a" id="checkbox-1a" checked="">
+                <label for="checkbox-1a">ECG</label>
+                <input type="checkbox" name="checkbox-2a" id="checkbox-2a">
+                <label for="checkbox-2a">Sugar Test</label>
+                <input type="checkbox" name="checkbox-3a" id="checkbox-3a">
+                <label for="checkbox-3a">Hemoglobin Test</label>
+                <input type="checkbox" name="checkbox-4a" id="checkbox-4a">
+                <label for="checkbox-4a">Thyroid Test</label>
+            </fieldset>
+            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+
+                <legend>Enter you want hardcopy/softcopy of repot or both:</legend>
+                <input type="checkbox" name="checkbox-6" id="checkbox-6">
+                <label for="checkbox-6">HardCopy</label>
+                <input type="checkbox" name="checkbox-7" id="checkbox-7" checked="">
+                <label for="checkbox-7"><em>SoftCopy</em></label>
+                <input type="checkbox" name="checkbox-8" id="checkbox-8">
+                <label for="checkbox-8">Both</label>
+            </fieldset>
+            <fieldset data-role="controlgroup">
+
+                <legend>Gender:</legend>
+                <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked">
+                <label for="radio-choice-1">Male</label>
+                <input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2">
+                <label for="radio-choice-2">Female</label>
+                <input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3">
+                <label for="radio-choice-3">Others</label>
+
+            </fieldset>
+            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+
+                <legend>BloodGroup:</legend>
+                <input type="radio" name="radio-choice-b" id="radio-choice-c" value="list" checked="checked">
+                <label for="radio-choice-c">O+ve</label>
+                <input type="radio" name="radio-choice-b" id="radio-choice-d" value="grid">
+                <label for="radio-choice-d">O-ve</label>
+                <input type="radio" name="radio-choice-b" id="radio-choice-e" value="gallery">
+                <label for="radio-choice-e">B+ve</label>
+                <input type="radio" name="radio-choice-b" id="radio-choice-e" value="gallery">
+                <label for="radio-choice-e">B-ve</label>
+                <input type="radio" name="radio-choice-b" id="radio-choice-e" value="gallery">
+                <label for="radio-choice-e">A+ve</label>
+                <input type="radio" name="radio-choice-b" id="radio-choice-e" value="gallery">
+                <label for="radio-choice-e">A-ve</label>
+                <input type="radio" name="radio-choice-b" id="radio-choice-e" value="gallery">
+                <label for="radio-choice-e">AB+ve</label>
+                <input type="radio" name="radio-choice-b" id="radio-choice-e" value="gallery">
+                <label for="radio-choice-e">AB-ve</label>
+            </fieldset>
+            <label for="select-choice-1" class="select">Appointment Timing</label>
+            <select name="select-choice-1" id="select-choice-1">
+              <option value="standard">10AM-11AM</option>
+              <option value="rush">12PM-1PM</option>
+              <option value="express">2PM-3PM</option>
+              <option value="overnight">4PM-5PM</option>
+            </select>
+            <!--<div class="ui-field-contain">
+                <label for="select-native-1">Native select:</label>
+                <select disabled="disabled" name="select-native-1" id="select-native-1">
+                        <option value="small">One</option>
+                        <option value="medium">Two</option>
+                        <option value="large">Three</option>
+                </select>
+            </div>-->
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>
